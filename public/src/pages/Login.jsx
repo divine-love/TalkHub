@@ -66,7 +66,7 @@ export default function Login() {
         <form action="" onSubmit={(event) => handleSubmit(event)}>
           <div className="brand">
             <img src={Logo} alt="logo" />
-            <h1>snappy</h1>
+            <h1>Chit-Chat</h1>
           </div>
           <input
             type="text"
@@ -100,7 +100,7 @@ const FormContainer = styled.div`
   justify-content: center;
   gap: 1rem;
   align-items: center;
-  background-color: #131324;
+  background-color: #A020F0;
   .brand {
     display: flex;
     align-items: center;
@@ -126,7 +126,7 @@ const FormContainer = styled.div`
   input {
     background-color: transparent;
     padding: 1rem;
-    border: 0.1rem solid #4e0eff;
+    border: 0.1rem solid #000000;
     border-radius: 0.4rem;
     color: white;
     width: 100%;
@@ -137,8 +137,8 @@ const FormContainer = styled.div`
     }
   }
   button {
-    background-color: #4e0eff;
-    color: white;
+    background-color: #FFFFFF;
+    color: black;
     padding: 1rem 2rem;
     border: none;
     font-weight: bold;

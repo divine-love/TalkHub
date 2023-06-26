@@ -5,6 +5,7 @@ import Logout from "./Logout";
 
 export default function Welcome() {
   const [userName, setUserName] = useState("");
+
   useEffect(async () => {
     setUserName(
       await JSON.parse(
@@ -12,14 +13,17 @@ export default function Welcome() {
       ).username
     );
   }, []);
+
   return (
     <Container>
+      <LogoutWrapper>
+        <Logout />
+      </LogoutWrapper>
       <img src={Robot} alt="" />
       <h1>
         Welcome, <span>{userName}!</span>
       </h1>
-      <h3>Please select a chat to Start messaging.</h3>
-      <Logout />
+      <h3>Please select a Contact To Start Conversation</h3>
     </Container>
   );
 }
@@ -30,10 +34,18 @@ const Container = styled.div`
   align-items: center;
   color: white;
   flex-direction: column;
+  position: relative; /* Added position relative to the container */
   img {
     height: 20rem;
   }
   span {
     color: #4e0eff;
   }
+`;
+
+const LogoutWrapper = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
 `;
