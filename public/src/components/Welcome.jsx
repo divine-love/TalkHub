@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import Robot from "../assets/robot.gif";
+import Robot from "../assets/1UEW.gif";
 import Logout from "./Logout";
 
 export default function Welcome() {
@@ -20,9 +20,11 @@ export default function Welcome() {
         <Logout />
       </LogoutWrapper>
       <img src={Robot} alt="" />
+      <br></br>
       <h1>
         Welcome, <span>{userName}!</span>
       </h1>
+      <br></br>
       <h3>Please select a Contact To Start Conversation</h3>
     </Container>
   );
@@ -36,7 +38,7 @@ const Container = styled.div`
   flex-direction: column;
   position: relative; /* Added position relative to the container */
   img {
-    height: 20rem;
+    height: 15rem;
   }
   span {
     color: #4e0eff;
