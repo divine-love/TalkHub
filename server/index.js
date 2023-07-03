@@ -8,6 +8,7 @@ const socket = require("socket.io");
 require("dotenv").config();
 app.use(cors());
 app.use(express.json());
+const BASE_URL=process.env.BASE_URL
 
 mongoose.connect("mongodb://0.0.0.0:27017/chat",{useNewUrlParser:true}).then(()=>{
     console.log("DB connection succesfully");
@@ -23,7 +24,7 @@ const server = app.listen(process.env.PORT, () =>
 );
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: '${BASE_URL}',
     credentials: true,
   },
 });
