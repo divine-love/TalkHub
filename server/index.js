@@ -10,7 +10,8 @@ app.use(cors());
 app.use(express.json());
 const BASE_URL=process.env.BASE_URL
 
-mongoose.connect("mongodb://0.0.0.0:27017/chat",{useNewUrlParser:true}).then(()=>{
+
+mongoose.connect(process.env.Database,{useNewUrlParser:true}).then(()=>{
     console.log("DB connection succesfully");
 }).catch((err)=>{
     console.log(err.message);
